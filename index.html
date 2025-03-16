@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Via cep API</title>
+</head>
+
+<body>
+    <header class="nav-container">
+        <nav class="nav-main">
+            <h1>DSViaCep</h1>
+            <button id="modalActive" class="contact-link">contato</button>
+        </nav>
+    </header>
+    <main>
+        <section id="form-section">
+            <div id="contentDatad">
+                <form name="newAdress">
+                    <div id="input-container">
+                        <div class="input-content">r
+                            <label for="cep" id="n"></label>
+                            <input class="form-input" type="text" name="cep" id="cep" placeholder="CEP" required>
+                        </div>
+                        <div class="error-message" data-error="cep"></div>
+                        <div class="input-content">
+                            <label for="street"></label>
+                            <input class="form-input" type="text" name="street" id="street" placeholder="Logradouro" disabled>
+                        </div>
+                        <div class="input-content">
+                            <label for="number"></label>
+                            <input class="form-input" type="text" name="number" id="number" placeholder="Numero"
+                                required>
+                        </div>
+                        <div class="error-message" data-error="number"></div>
+                        <div class="input-content">
+                            <label for="city"></label>
+                            <input class="form-input" type="text" name="city" id="city" placeholder="Cidade" disabled>
+                        </div>
+                    </div>
+                    <div id="btn-container">
+                        <button name="btnSave" class="btn btn-left" type="submit">Salvar</button>
+                        <button name="btnClear" class="btn btn-right" type="reset">Limpar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="list-section" class="list-container">
+            <div class="card-list-item">
+                <h2>Sao Paulo</h2>
+                <p class="adress-line">Rua dos Jardins, 728</p>
+                <p class="adress-cep">11200-345</p>
+            </div>
+        </section>
+    </main>
+
+    <section id="modal-conatct" class="modal-wrapper">
+        <div class="modal-box">
+            <div class="modal-content">
+                @devsuperio.ig
+            </div>
+            <button id="modal-content-close" class="btn">Fechar</button>
+        </div>
+    </section>
+
+    <script type="module" src="./js/dsviacep.js" defer></script>
+</body>
+
+</html>
